@@ -1,0 +1,5 @@
+name: pull-request-gitflow
+description: Github action that validates gitflow in pull request
+runs:
+  using: 'node12'
+  main: lib/index.js

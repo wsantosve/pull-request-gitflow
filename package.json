@@ -1,0 +1,28 @@
+{
+  "name": "pull-request-gitflow",
+  "version": "1.0.0",
+  "description": "Github action that validates gitflow in pull request",
+  "main": "lib/index.js",
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "scripts": {
+    "build": "ncc build src/index.js --target es2020 --out lib --license licenses.txt",
+    "test": "jest",
+    "lint": "standard"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.4.0",
+    "@actions/github": "^5.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.29.0",
+    "jest": "^27.0.6",
+    "standard": "^16.0.3"
+  }
+}
