@@ -1,6 +1,6 @@
-const validateBranchWorkflow = require('validate-workflow')
 const core = require('@actions/core')
 const github = require('@actions/github')
+const validateBranchWorkflow = require('./validate-workflow')
 
 try {
   const targetBranch = github.context.base_ref
@@ -12,5 +12,3 @@ try {
 } catch (err) {
   core.setFailed(err.message)
 }
-
-console.log(validateBranchWorkflow)
