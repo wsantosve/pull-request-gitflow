@@ -10,10 +10,13 @@ This action validates the target and source branch to follow gitflow workflow
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-name: Gitflow workflow
+name: Continous Integration
 jobs:
-  validate-workflow:
+  gitflow:
     runs-on: ubuntu-latest
     steps:
-      - uses: wsantos-conekta/pull-request-gitflow@master
+      - uses: actions/checkout@v2
+      - name: Gitflow validation
+        uses: wsantos-conekta/pull-request-gitflow@master
+
 ```
